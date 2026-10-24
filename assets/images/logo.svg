@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314 130" width="314" height="130" role="img" aria-label="hanxa">
+  <!-- hanxa wordmark. Letters in the site's sans stack; the x is a geometric mark:
+       one unbroken diagonal, the counter-diagonal sliced into two pieces with a
+       constant-width channel along the main stroke. Fill is white by default;
+       the inline copy in index.html uses currentColor. -->
+  <g fill="#ffffff" font-family="'Source Sans Pro','Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="100">
+    <text x="172" y="100" text-anchor="end">han</text>
+    <text x="250" y="100" text-anchor="start">a</text>
+  </g>
+  <g fill="#ffffff" transform="translate(180 28) scale(0.6207)">
+    <path d="M0 0H38L100 116H62Z"/>
+    <path d="M62 0H100L74.7 47.3L55.7 11.8Z"/>
+    <path d="M38 116H0L25.3 68.7L44.3 104.2Z"/>
+  </g>
+</svg>
