@@ -109,17 +109,15 @@ function renderProjects(container) {
     body.classList.add("is-article-visible");
     articles.forEach((a) => a.classList.remove("active", "is-shown"));
     article.classList.add("active");
-    // next frame so the transition runs
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        article.classList.add("is-shown");
-        article.setAttribute("tabindex", "-1");
-        article.focus({ preventScroll: true });
-        window.scrollTo(0, 0);
-        current = id;
-        locked = false;
-      });
-    });
+    // Force a reflow so the opacity transition runs from the display:none state.
+    // (Synchronous on purpose: requestAnimationFrame is paused in hidden tabs.)
+    void article.offsetWidth;
+    article.classList.add("is-shown");
+    article.setAttribute("tabindex", "-1");
+    article.focus({ preventScroll: true });
+    window.scrollTo(0, 0);
+    current = id;
+    locked = false;
   }
 
   function hide() {
@@ -135,6 +133,9 @@ function renderProjects(container) {
   }
 
   function route() {
+    // Undo the browser's native jump to the #id anchor; the panel is positioned by CSS.
+    window.scrollTo(0, 0);
+    setTimeout(() => window.scrollTo(0, 0), 0);
     const id = location.hash.replace(/^#\/?/, "");
     if (id && ids.includes(id)) {
       if (id !== current) show(id);
@@ -162,6 +163,7 @@ function renderProjects(container) {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   window.addEventListener("load", () => {
     // Fade in, then route to any deep link.
     setTimeout(() => body.classList.remove("is-preload"), 100);
