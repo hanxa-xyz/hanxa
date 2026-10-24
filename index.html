@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hanxa</title>
+  <meta name="description" content="David Bang — things I'm building.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="is-preload">
+
+  <!-- Full-screen background -->
+  <div id="bg" aria-hidden="true"></div>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header (home card) -->
+    <header id="header">
+      <div class="logo" aria-hidden="true">
+        <span class="logo-mark">h</span>
+      </div>
+      <div class="content">
+        <div class="inner">
+          <h1>hanxa</h1>
+          <p>Things I'm building. Data, models, and small tools by <strong>David Bang</strong>.</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main (article panels) -->
+    <div id="main">
+
+      <!-- About -->
+      <article id="about">
+        <h2 class="major">About</h2>
+        <p>
+          <!-- TODO: replace placeholder copy -->
+          Hi, I'm David. I'm a data scientist working on fintech and brokerage problems.
+          I like experiments, clean metrics, and tools that make analysis repeatable.
+        </p>
+        <p>
+          This site collects the things I build outside of work. Most of it is open source
+          and linked from the <a href="#projects">Projects</a> page.
+        </p>
+      </article>
+
+      <!-- Projects -->
+      <article id="projects">
+        <h2 class="major">Projects</h2>
+        <p>A few things I'm working on. Tiles are rendered from <code>assets/js/main.js</code> — add an entry to the <code>PROJECTS</code> array to add a tile.</p>
+        <div class="tiles" id="project-tiles">
+          <!-- Rendered by main.js -->
+        </div>
+      </article>
+
+      <!-- Contact -->
+      <article id="contact">
+        <h2 class="major">Contact</h2>
+        <p>
+          <!-- TODO: replace placeholder copy -->
+          The quickest way to reach me is email. I'm also on GitHub and LinkedIn.
+        </p>
+        <ul class="contact-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:hello@hanxa.xyz">hello@hanxa.xyz</a>
+          </li>
+          <li>
+            <span class="label">GitHub</span>
+            <a href="https://github.com/" target="_blank" rel="noopener">github.com/your-handle</a>
+          </li>
+          <li>
+            <span class="label">LinkedIn</span>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/your-handle</a>
+          </li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p class="copyright">&copy; <span id="year"></span> David Bang &middot; hanxa.xyz</p>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
